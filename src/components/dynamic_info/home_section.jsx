@@ -9,12 +9,13 @@ import { Navigation, Pagination } from "swiper/modules";
 import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
 import { FaCalendar, FaDollarSign } from "react-icons/fa";
+import { ReactTyped } from 'react-typed';
 export const HomeSection = () => {
   return (
     <div className="home-section">
       {/* welcome image and information blow up */}
-      <div className="image-container bg-home_bg">
-        <h2>Welcome to our website!</h2>
+      <div className="image-container">
+        <TypedComponent />
         <h1>ENRICHING SOCIETIES</h1>
         <button>DONATE</button>
       </div>
@@ -66,6 +67,17 @@ export const HomeSection = () => {
     </div>
   );
 };
+function TypedComponent(){
+    return(
+        <ReactTyped
+        strings={['Welcome to our website', 'We are glad you are here']}
+        typeSpeed={100}
+        backSpeed={50}
+        loop
+        className="typed-text"
+         />
+    )
+}
 
 // image slider component
 function ImageSlider() {

@@ -10,7 +10,6 @@ export const Home =()=> {
             <Navbar />
             <HomeSection />
             <Footer />
-
         </div>
     )
 }

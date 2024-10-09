@@ -1,16 +1,23 @@
 import { NavLink } from "react-router-dom";
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import { useState } from "react";
 export const Navbar = () => {
+    const [showArrow, setShowArrow] = useState(false);
   // component to handle single list item on navbar
   function NavListLink({ text, link, dropDown }) {
     return (
-      <li>
-        <NavLink to={link}>{text}</NavLink>
+      <li className="nav-link">
+        <NavLink to={link} className={'link'}>{text}
+            {dropDown && (
+                <FaAngleDown className="arrow-icon" onClick={() => setShowArrow(!showArrow)} />
+                )}
+        </NavLink>
         {/*dropdown feature when user hovers on the link*/}
         {dropDown && dropDown.length > 0 ? (
           <ul className="dropdown">
             {dropDown.map((item, index) => (
               <li key={index}>
-                <NavLink to={item.link}>{item.text}</NavLink>
+                <NavLink to={item.link}>{item.text} </NavLink>
               </li>
             ))}
           </ul>
@@ -21,8 +28,8 @@ export const Navbar = () => {
     );
   }
   return (
-    <nav>
-      <div className="title">x-company</div>
+    <nav className="nav-container">
+      <div className="title">x-organization</div>
       <ul className="nav-links">
         <NavListLink link={"/"} text={"Home"} />
         <NavListLink
