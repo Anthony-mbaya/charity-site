@@ -109,13 +109,13 @@ function ImageSlider() {
 
 function EventsTable() {
   return (
-    <table>
+    <table className="events">
       <thead>
         <tr>
           <th>Event Name</th>
           <th>Event Time</th>
           <th>
-            <FaCalendar />
+            <FaCalendar className="calendar" />
           </th>
         </tr>
       </thead>
@@ -124,6 +124,12 @@ function EventsTable() {
           <td>Event 1</td>
           <td>10:00 AM - 12:00 PM</td>
           <td>12/12/2024</td>
+        </tr>
+        <hr />
+        <tr>
+          <td>Event 2</td>
+          <td>12:00 AM - 2:00 PM</td>
+          <td>1/1/2024</td>
         </tr>
       </tbody>
     </table>
@@ -177,7 +183,7 @@ function StepsToFollow() {
     <div className="steps-to-follow">
       <div className="step1">
         <span>
-          <h1>1</h1>
+          <h2>1</h2>
         </span>
         <span>
           <h1>Orphans</h1>
@@ -186,12 +192,12 @@ function StepsToFollow() {
           </p>
         </span>
       </div>
-      <div className="step2">
+      <div className="step1">
         <span>
-          <h1>1</h1>
+          <h2>2</h2>
         </span>
         <span>
-          <h1>Orphans</h1>
+          <h1>Sustainability</h1>
           <p>
             e Saliheen Foundation supports orphans by providing education, hea
           </p>
