@@ -23,4 +23,20 @@ export const updatesData = [
         'button':'more',
         'text': 'Children’s Home on May 21, 2023, offers an opportunity to witness firsthand the nurturing environment provided to orphaned and vulnerable children. Experience the love, care, and impact being ma',
     },
+    {
+        'id': 4,
+        'title': 'example 3 title',
+        'image': 'src/assets/images/download.jpeg ',
+        'date': '6 mar',
+        'button':'more',
+        'text': 'Children’s Home on May 21, 2023, offers an opportunity to witness firsthand the nurturing environment provided to orphaned and vulnerable children. Experience the love, care, and impact being ma',
+    },
+    {
+        'id': 5,
+        'title': 'example 3 title',
+        'image': 'src/assets/images/download.jpeg ',
+        'date': '6 mar',
+        'button':'more',
+        'text': 'Children’s Home on May 21, 2023, offers an opportunity to witness firsthand the nurturing environment provided to orphaned and vulnerable children. Experience the love, care, and impact being ma',
+    },
 ]

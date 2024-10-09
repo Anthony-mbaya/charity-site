@@ -211,9 +211,9 @@ function Join() {
     <div className="join">
       <img
         src="src/assets/images/HD-wallpaper-technology-code-programmer-minimalist.jpg"
-        alt=""
+        alt="join image"
       />
-      <div className="join-info bg-home_bg">
+      <div className="join-info">
         <h1>Why Join Our Community</h1>
         <p>
           ves you the chance to be part of a compassionate community dedicated
@@ -241,7 +241,7 @@ function UpdatesNews() {
           updatesData.map((update, index) => (
             <div className="update-item" key={index}>
               <img src={update.image} alt={update.title} />
-              <p>{update.date}</p>
+              <h2>| {update.date}</h2>
               <h1>{update.title}</h1>
               <p>{update.text}</p>
               <button>{update.button}</button>

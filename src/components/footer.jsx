@@ -8,6 +8,7 @@ export const Footer = () => {
   return (
     <div className="footer">
         {/*footer about us section*/}
+        <div className="footer-container">
       <div className="footer-about-us">
         <h2>About Us</h2>
         <p>
@@ -28,7 +29,7 @@ export const Footer = () => {
       </div>
       {/* footer reach us section */}
       <div className="footer-reach-us">
-        <h1>Reach us</h1>
+        <h2>Reach us</h2>
         <span>
             <input type="email" name="email"  />
             <button>send</button>
@@ -36,14 +37,15 @@ export const Footer = () => {
       </div>
       {/* footer gallery section */}
       <div className="footer-gallery-section">
-        <h1>Gallery</h1>
-        <div className="footer-images grid grid-cols-2">
+        <h2>Gallery</h2>
+        <div className="footer-images">
             <FooterImage src={'src/assets/images/download (2).jpeg'} alt={'image1'} />
             <FooterImage src={'src/assets/images/download.jpeg'} alt={'image2'} />
             <FooterImage src={'src/assets/images/HD-wallpaper-technology-code-programmer-minimalist.jpg'} alt={'image3'} />
         </div>
       </div>
-      <p>&copy; Made by Dev Tonny</p>
+      </div>
+      <p className='copy'>&copy; Made by Dev Tonny</p>
     </div>
   );
 };

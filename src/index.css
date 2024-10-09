@@ -187,5 +187,91 @@
 }
 .step1 p{
   @apply font-light
-  }
-    /* footer section */
+}
+/* join sectiopn */
+.join{
+  @apply flex flex-row
+}
+.join img{
+  @apply w-2/3 h-1/2
+}
+.join-info{
+  @apply bg-home_bg opacity-70 text-white text-center flex flex-col gap-3 justify-center items-center
+}
+.join-info h1{
+  @apply text-xl font-bold my-2
+}
+.join-info p{
+  @apply animate-pulse
+}
+.join-info button{
+  @apply bg-green-500 w-fit mx-auto px-6 py-2 shadow-xl shadow-black hover:scale-105 duration-300
+}
+/* updates and news */
+.updates-news{
+  @apply container bg-slate-300 mt-4 py-4 mx-auto flex flex-col gap-3 justify-center items-center
+}
+.update-info{
+  @apply text-center
+}
+.update-info h1{
+  @apply text-2xl mt-7 font-bold uppercase animate-bounce text-blue-700
+}
+.update-info p{
+  @apply w-3/5 mx-auto my-2 text-blue-600
+}
+.updates-list{
+  @apply grid grid-cols-4 gap-10 mx-auto w-full
+}
+.update-item{
+  @apply w-4/5 h-fit mx-auto
+}
+.update-item img{
+  @apply h-1/2 w-full
+}
+.update-item h2{
+  @apply font-bold
+}
+.update-item h1{
+  @apply text-xl font-bold uppercase underline underline-offset-4
+}
+.update-item button{
+  @apply bg-blue-600 text-white w-full my-3 py-2 rounded-lg hover:bg-blue-900
+}
+/* footer section */
+.footer{
+  @apply container text-sm pt-3 mx-auto bg-slate-900  text-white flex flex-col
+}
+.footer-container{
+  @apply flex flex-row mx-auto
+}
+.footer-container div{
+  @apply w-1/4 mx-auto flex flex-col justify-start items-center py-5 px-3
+}
+.footer-container h2{
+  @apply text-2xl py-3
+}
+.footer-about-us{
+  @apply flex flex-col gap-3
+}
+.footer-contacts ul{
+  @apply flex flex-col gap-2
+}
+.footer-contacts li{
+  @apply flex justify-start items-center gap-2
+}
+.footer-reach-us input{
+  @apply h-8 px-2 mr-2 text-black rounded-lg
+}
+.footer-reach-us button{
+  @apply bg-green-600 text-white p-2 rounded-lg
+}
+.footer-gallery-section{
+  @apply flex flex-col items-center justify-start
+}
+.footer-gallery-section div{
+  @apply grid grid-cols-2 gap-2 w-full
+}
+.footer .copy{
+  @apply px-2 py-2
+}
