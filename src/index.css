@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h1{
-  @apply text-3xl font-bold text-green-600;
+.home-container{
+  @apply container mx-auto py-1
+}
+.platform-links{
+  @apply bg-black text-white text-sm flex justify-between p-2
+}
+.platform-links1{
+  @apply flex gap-2
 }
