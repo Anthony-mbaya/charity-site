@@ -65,3 +65,66 @@
 .image-container button{
   @apply bg-yellow-600 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black animate-bounce hover:bg-yellow-900
 }
+.mySwiper{
+  @apply h-[60vh] w-full my-2 py-3
+}
+.swiperSlide{
+  @apply h-full w-full flex flex-col justify-center items-center
+}
+.swiperSlide img{
+  @apply object-cover object-center w-[32rem]
+}
+.swiperSlide button{
+  @apply fixed bottom-7 bg-yellow-500 hover:bg-yellow-800 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black
+}
+.swiperSlide p{
+  @apply text-xl text-blue-600
+}
+/*services section*/
+.services{
+  @apply container w-full py-2 bg-slate-200 flex flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
+}
+.services li{
+  @apply px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse
+}
+/*volunteer*/
+.volunteer{
+  @apply container my-5 flex flex-col gap-3
+}
+.volunteer p{
+  @apply text-sm text-center
+}
+.volunteer h1{
+  @apply text-blue-500 text-2xl font-bold text-center
+}
+.register{
+  @apply flex flex-col gap-2 justify-center items-center py-5
+}
+.register img{
+  @apply w-[25rem] rounded-xl shadow-xl shadow-slate-500
+}
+.volunteer h2{
+  @apply text-sm text-green-600 my-3 font-bold
+}
+.register button{
+  @apply bg-blue-700 hover:bg-blue-800 animate-bounce text-white px-3 py-2 shadow-xl shadow-slate-600 mt-2
+}
+/* support section */
+.support{
+  @apply container h-[70vh] bg-slate-300 flex justify-around items-center p-3
+}
+.support1{
+  @apply bg-white w-2/5 p-5 flex flex-col justify-center gap-6 h-4/5 items-center shadow-xl shadow-slate-600 rounded-xl
+}
+.support1 h1{
+  @apply text-center text-2xl text-green-500 font-bold border-b-2 border-green-600 w-fit
+}
+.support1 p{
+  @apply w-3/5
+}
+.support1 button{
+  @apply bg-green-500 px-4 py-2
+}
+.support2 h1{
+  @apply text-3xl font-bold break-words flex flex-col gap-3
+}

@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // slider styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 //SwiperCore.use([Pagination, Navigation]); // swiper modules
 import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
@@ -30,16 +31,16 @@ export const HomeSection = () => {
       </ul>
       {/* volunteer section */}
       <div className="volunteer">
-        <p> help to those who need it</p>
+        <p>| help to those who need it</p>
         <h1>Each donation is an essential help for everyone's life</h1>
         <div className="register">
           <img src="src/assets/images/download (1).jpeg" alt="" />
-          <h1>Become a Member</h1>
+          <h2>Become a Member</h2>
           <button>REGISTER</button>
         </div>
       </div>
       {/* support section */}
-      <div className="support bg-home_bg">
+      <div className="support">
         <div className="support1">
           <h1>Support Us</h1>
           <p>
@@ -51,7 +52,8 @@ export const HomeSection = () => {
           </button>
         </div>
         <div className="support2">
-          <h1>Volunteer || Support Now</h1>
+          <h1>30+ Volunteers </h1>
+          <h1>70+ Support Now</h1>
         </div>
       </div>
       {/* events table list */}
@@ -84,17 +86,18 @@ function ImageSlider() {
   return (
     <Swiper
       spaceBetween={30}
-      slidesPerView={1}
+      slidesPerView={4}
       navigation
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Scrollbar]}
+      scrollbar={{ draggable: true }}
       pagination={{ clickable: true }}
+      autoplay={{ delay: 500 }}
       className="mySwiper"
     >
       {slider_image_list.map((image, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} className="swiperSlide">
           <img src={image.image} alt={image.alt} />
           <button>
-            <i className="fa fa-heart"></i>
             {image.btn_text}
           </button>
           <p>{image.text}</p>
