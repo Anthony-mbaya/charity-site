@@ -1,4 +1,4 @@
-import slider1 from '../images/download (1).jpeg';
+import slider1 from '/images/download (1).jpeg';
 const slider_image_list = [
     {
         "id": 1,
