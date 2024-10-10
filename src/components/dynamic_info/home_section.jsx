@@ -41,7 +41,7 @@ export const HomeSection = () => {
         <p>| help to those who need it</p>
         <h1>Each donation is an essential help for everyone's life</h1>
         <div className="register">
-          <img src="public/images/donation.jpeg" alt="donation image" />
+          <img src="/images/donation.jpeg" alt="donation image" />
           <h2>Become a Member</h2>
           <button>REGISTER</button>
         </div>
