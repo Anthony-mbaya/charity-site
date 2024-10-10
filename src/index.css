@@ -28,7 +28,7 @@
 }
 /* navbar */
 .nav-container{
-  @apply w-screen h-fit inset-0 bg-black bg-opacity-80 text-white text-sm;
+  @apply w-screen h-fit inset-0 bg-white bg-opacity-80 text-slate-950 text-sm;
   @apply px-2 py-2 sm:py-4 sm:rounded-md sm:rounded-t-none z-10 sm:container;
   @apply fixed top-[2.46rem] sm:top-10 sm:mx-auto flex justify-between items-center;
 }
@@ -52,7 +52,7 @@
   @apply flex gap-2 justify-center items-center
 }
 .dropdown{
-  @apply hidden absolute
+  @apply hidden absolute bg-white bg-opacity-80 w-full rounded-b-lg p-2 hover:text-slate-600
 }
 .arrow-icon{
   @apply transition-transform duration-300
@@ -61,7 +61,7 @@
   @apply block transition-transform duration-1000 ease-in-out
 }
 .dropdown li{
-  @apply hover:text-slate-600 text-white
+  @apply hover:text-slate-600 text-slate-950
 }
 /* sidebar navigation bar */
 .sidebar{
@@ -84,19 +84,19 @@
   @apply sm:container w-full mx-auto mt-[5.4rem] sm:mt-[5.4rem] py-3
 }
 .image-container{
-  @apply bg-[#34296d] h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3
+  @apply bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3
 }
 .typed-text{
   @apply text-lg sm:text-4xl font-extralight font-sans px-5 py-2 sm:py-2 rounded-2xl h-10 sm:h-16 sm:my-2
 }
 .image-container h1{
-  @apply text-4xl font-bold font-sans py-7 px-10 border-4 shadow-2xl shadow-black rounded-2xl border-r-transparent border-teal-400 w-fit animate-pulse my-5
+  @apply text-4xl font-bold font-sans py-7 px-10 border-4 shadow-2xl shadow-black rounded-2xl border-r-transparent border-white w-fit animate-pulse my-5
 }
 .image-container button{
   @apply bg-yellow-600 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black animate-bounce hover:bg-yellow-900
 }
 .image-container-text{
-  @apply text-[1rem] sm:text-sm md:text-lg font-light font-sans px-2 py-4 w-full sm:w-4/5
+  @apply text-[1rem] sm:text-sm md:text-lg font-light font-sans sm:px-2 py-4 w-full sm:w-4/5
 }
 /* swiper compinent */
 .swiper-container{

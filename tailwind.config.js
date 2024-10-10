@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         'home_bg': 'url("src/assets/images/hands-up.jpg")',
+        'bg1': 'url("public/images/bg2.avif")',
       }
     },
   },
