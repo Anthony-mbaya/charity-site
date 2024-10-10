@@ -1,19 +1,43 @@
 import { NavLink } from "react-router-dom";
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import { FaAngleDown, FaHamburger, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 export const Navbar = () => {
-    const [showArrow, setShowArrow] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
   // component to handle single list item on navbar
+  const handleArrow = (e) => {
+    e.preventDefault();
+    setShowArrow((prev) => !prev);
+  };
+  const handleMouseEnter = () => {
+    setShowArrow(true);
+  };
+  const handleMouseLeave = () => {
+    setShowArrow(false);
+  };
   function NavListLink({ text, link, dropDown }) {
     return (
-      <li className="nav-link">
-        <NavLink to={link} className={'link'}>{text}
-            {dropDown && (
-                <FaAngleDown className="arrow-icon" onClick={() => setShowArrow(!showArrow)} />
-                )}
+      <li
+        className="nav-link"
+        onMouseEnter={dropDown ? handleMouseEnter : null}
+        onMouseLeave={dropDown ? handleMouseLeave : null}
+        //onClick={dropDown ? handleArrow : null}
+      >
+        <NavLink
+          to={link}
+          className={"link"}
+          onClick={dropDown ? handleArrow : null}
+        >
+          {text}
+          {dropDown && (
+            <FaAngleDown
+              className={`'arrow-icon' ${showArrow ? "rotate-180" : ""}`}
+              onClick={handleArrow}
+            />
+          )}
         </NavLink>
         {/*dropdown feature when user hovers on the link*/}
-        {dropDown && dropDown.length > 0 ? (
+        {dropDown && dropDown.length > 0 && showArrow ? (
           <ul className="dropdown">
             {dropDown.map((item, index) => (
               <li key={index}>
@@ -27,9 +51,41 @@ export const Navbar = () => {
       </li>
     );
   }
+  //component handling toggle sidebar
+  const toggleBar = () => {
+    setShowMenu(!showMenu);
+  };
+  function SideBar() {
+    return (
+      <div className="sidebar">
+        <ul className="nav-links">
+          <span className="close-sidebar">
+            <FaTimes size={30} onClick={toggleBar} />
+          </span>
+          <NavListLink link={"/"} text={"Home"} />
+          <NavListLink
+            link={"/about"}
+            text={"About"}
+            dropDown={[
+              { link: "/team", text: "Team" },
+              { link: "/contact", text: "Contact" },
+            ]}
+          />
+          <NavListLink link={"/causes"} text={"Causes"} />
+          <NavListLink link={"/donate-now"} text={"Donate Now"} />
+          <NavListLink link={"/resources"} text={"Resources"} />
+          <NavListLink link={"/contacts"} text={"Contacts"} />
+          <NavListLink link={"/events"} text={"Events"} />
+        </ul>
+      </div>
+    );
+  }
   return (
     <nav className="nav-container">
-      <div className="title">x-organization</div>
+      <h1 className="title">x-organization</h1>
+      <span className="hamburger-tag">
+        {showMenu && <FaHamburger onClick={toggleBar} size={25} />}
+      </span>
       <ul className="nav-links">
         <NavListLink link={"/"} text={"Home"} />
         <NavListLink
@@ -46,6 +102,7 @@ export const Navbar = () => {
         <NavListLink link={"/contacts"} text={"Contacts"} />
         <NavListLink link={"/events"} text={"Events"} />
       </ul>
+      {!showMenu && <SideBar />}
     </nav>
   );
 };

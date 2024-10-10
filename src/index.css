@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 .home-container{
-  @apply container mx-auto py-1
+  @apply w-full sm:container mx-auto py-1
 }
 /* platform links */
 .platform-links{
-  @apply container bg-black bg-opacity-80 text-white text-sm fixed top-0 left-0 right-0 mx-auto flex justify-between p-2 rounded-md rounded-b-none z-10
+  @apply w-screen h-fit sm:container bg-black bg-opacity-80 text-white;
+  @apply text-sm fixed top-1 inset-0 sm:mx-auto sm:flex justify-center sm:justify-between;
+  @apply p-2 sm:rounded-md sm:rounded-b-none z-10;
 }
 .platform-links1{
-  @apply flex gap-2
+  @apply flex justify-start gap-2
 }
 .platform-links1 span{
   @apply flex gap-1 justify-center items-center
 }
 .platform-links2 ul{
-  @apply flex gap-2 justify-center items-center px-8
+  @apply hidden sm:flex gap-2 justify-center items-center sm:px-8
 }
 .platform-links2 ul li:first-child{
   @apply hover:text-white cursor-text
@@ -26,13 +28,22 @@
 }
 /* navbar */
 .nav-container{
-  @apply bg-black bg-opacity-80 text-white text-sm mt-9 px-2 py-4 rounded-md rounded-t-none z-10 container fixed top-0 left-0 right-0 mx-auto flex justify-between items-center
+  @apply w-screen h-fit inset-0 bg-black bg-opacity-80 text-white text-sm;
+  @apply px-2 py-2 sm:py-4 sm:rounded-md sm:rounded-t-none z-10 sm:container;
+  @apply fixed top-[2.46rem] sm:top-10 sm:mx-auto flex justify-between items-center;
 }
 .title{
-  @apply text-[2em]
+  @apply text-[2em] sm:text-[1.6em] text-center py-4 sm:py-1 w-fit
 }
+.hamburger-tag{
+  @apply px-4 sm:hidden
+}
+.hamburger{
+  @apply text-2xl cursor-pointer text-white
+}
+/* normal navigation bart */
 .nav-links{
-  @apply flex flex-row gap-2 md:gap-4 px-8
+  @apply hidden sm:flex flex-row items-center justify-center gap-2 md:gap-4 px-8 sm:px-4 sm:text-sm
 }
 .nav-link{
   @apply relative block hover:text-slate-600 hover:underline
@@ -43,21 +54,40 @@
 .dropdown{
   @apply hidden absolute
 }
+.arrow-icon{
+  @apply transition-transform duration-300
+}
 .nav-link:hover .dropdown{
   @apply block transition-transform duration-1000 ease-in-out
 }
 .dropdown li{
   @apply hover:text-slate-600 text-white
 }
+/* sidebar navigation bar */
+.sidebar{
+  @apply sm:hidden w-1/3 h-screen bg-slate-800 bg-opacity-90 text-white fixed top-[6.5rem] left-0;
+}
+.sidebar .nav-links{
+  @apply flex flex-col gap-2 items-start text-xl px-4 py-4 pl-8
+}
+.sidebar .dropdown{
+  @apply hidden absolute ml-8 px-3 py-2 z-10 w-fit bg-slate-900 opacity-100
+}
+.sidebar .dropdown li{
+  @apply hover:text-slate-600 text-white py-1
+}
+.close-sidebar{
+  @apply w-full flex justify-end mx-auto
+}
 /* home section with dynamic details */
 .home-section{
-  @apply container mx-auto mt-[5.4rem] py-3
+  @apply sm:container w-full mx-auto mt-[5.4rem] sm:mt-[5.4rem] py-3
 }
 .image-container{
-  @apply bg-[#34296d] h-screen text-white px-20 py-20 flex flex-col gap-3
+  @apply bg-[#34296d] h-screen text-white px-20 py-20 flex flex-col justify-center items-center gap-3
 }
 .typed-text{
-  @apply text-4xl font-extralight font-sans px-5 py-4 rounded-2xl
+  @apply text-2xl sm:text-4xl font-extralight font-sans px-5 py-2 sm:py-2 rounded-2xl h-10 sm:h-16 my-2
 }
 .image-container h1{
   @apply text-4xl font-bold font-sans py-7 px-10 border-4 shadow-2xl shadow-black rounded-2xl border-r-transparent border-teal-400 w-fit animate-pulse my-5
@@ -65,14 +95,24 @@
 .image-container button{
   @apply bg-yellow-600 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black animate-bounce hover:bg-yellow-900
 }
+.image-container-text{
+  @apply text-[1.3rem] sm:text-sm md:text-lg font-light font-sans px-2 py-4 sm:w-4/5
+}
+/* swiper compinent */
+.swiper-container{
+  @apply w-full h-auto
+}
+.swipe-slide{
+  @apply flex justify-center items-center
+}
 .mySwiper{
-  @apply h-[60vh] w-full my-2 py-3
+  @apply px-3 h-[50vh] sm:h-[60vh] w-full my-2 py-3
 }
 .swiperSlide{
-  @apply h-full w-full flex flex-col justify-center items-center
+  @apply h-1/2 my-auto sm:h-full w-full flex flex-col justify-center items-center
 }
 .swiperSlide img{
-  @apply object-cover object-center w-[32rem]
+  @apply object-cover object-center mx-auto h-full w-[50rem] sm:w-[32rem] rounded-xl shadow-xl shadow-slate-500
 }
 .swiperSlide button{
   @apply fixed bottom-7 bg-yellow-500 hover:bg-yellow-800 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black
@@ -82,10 +122,10 @@
 }
 /*services section*/
 .services{
-  @apply container w-full py-2 bg-slate-200 flex flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
+  @apply sm:container w-screen py-2 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
 }
 .services li{
-  @apply px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse
+  @apply w-1/2 sm:w-auto text-center px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse
 }
 /*volunteer*/
 .volunteer{
@@ -111,10 +151,10 @@
 }
 /* support section */
 .support{
-  @apply container h-[70vh] bg-slate-300 flex justify-around items-center p-3
+  @apply sm:container h-[70vh] bg-slate-300 flex flex-col sm:flex-row justify-around items-center p-3
 }
 .support1{
-  @apply bg-white w-2/5 p-5 flex flex-col justify-center gap-6 h-4/5 items-center shadow-xl shadow-slate-600 rounded-xl
+  @apply bg-white bg-opacity-70 sm:w-2/5 p-2 sm:p-5 flex flex-col justify-center gap-6 h-3/5 sm:h-4/5 items-center shadow-xl shadow-slate-600 rounded-xl
 }
 .support1 h1{
   @apply text-center text-2xl text-green-500 font-bold border-b-2 border-green-600 w-fit
@@ -130,7 +170,7 @@
 }
 /* events section table */
 .events{
-  @apply container w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-3 rounded-xl shadow-xl shadow-gray-500 px-2
+  @apply sm:container w-full sm:w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-3 rounded-xl shadow-xl shadow-gray-500 px-2
 }
 .events thead tr{
   @apply flex justify-between items-center
@@ -145,11 +185,11 @@
   @apply flex justify-between items-center bg-green-950
   }
 .events td{
-    @apply text-white font-light w-full text-center
+    @apply text-white font-light w-full text-center text-sm
 }
 /* contribution plans */
 .contribution-plan{
-  @apply container text-sm w-full h-[60vh] mx-auto grid grid-cols-3 items-center
+  @apply sm:container text-sm w-full sm:h-[60vh] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-3 items-center
 }
 .plan{
   @apply bg-gradient-to-r from-slate-200 via-transparent to-slate-200 max-w-[1240px] w-4/6 px-4 py-8 shadow-2xl shadow-slate-600 rounded-lg hover:scale-105 duration-300 mx-auto hover:opacity-90 cursor-context-menu flex flex-col justify-center items-center gap-3
@@ -174,7 +214,7 @@
 }
 /* steps */
 .steps-to-follow{
-  @apply container w-8/12 mx-auto my-2 py-4 flex gap-16
+  @apply sm:container sm:w-8/12 mx-auto my-2 py-4 px-4 flex flex-col gap-5 sm:flex-row sm:gap-16
 }
 .step1{
   @apply bg-green-500 p-4 flex gap-5 justify-center items-center rounded-md shadow-lg shadow-slate-500
@@ -190,13 +230,13 @@
 }
 /* join sectiopn */
 .join{
-  @apply flex flex-row
+  @apply flex flex-col sm:flex-row px-4
 }
 .join img{
-  @apply w-2/3 h-1/2
+  @apply sm:w-2/3 h-1/2
 }
 .join-info{
-  @apply bg-home_bg opacity-70 text-white text-center flex flex-col gap-3 justify-center items-center
+  @apply bg-home_bg opacity-70 py-4 text-white text-center flex flex-col gap-3 justify-center items-center
 }
 .join-info h1{
   @apply text-xl font-bold my-2
@@ -209,7 +249,7 @@
 }
 /* updates and news */
 .updates-news{
-  @apply container bg-slate-300 mt-4 py-4 mx-auto flex flex-col gap-3 justify-center items-center
+  @apply sm:container bg-slate-300 mt-4 py-4 mx-auto flex flex-col gap-3 justify-center items-center;
 }
 .update-info{
   @apply text-center
@@ -221,7 +261,7 @@
   @apply w-3/5 mx-auto my-2 text-blue-600
 }
 .updates-list{
-  @apply grid grid-cols-4 gap-10 mx-auto w-full
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto w-full
 }
 .update-item{
   @apply w-4/5 h-fit mx-auto
@@ -240,13 +280,13 @@
 }
 /* footer section */
 .footer{
-  @apply container text-sm pt-3 mx-auto bg-slate-900  text-white flex flex-col
+  @apply sm:container text-sm pt-3 mx-auto bg-slate-900  text-white flex flex-col
 }
 .footer-container{
-  @apply flex flex-row mx-auto
+  @apply flex flex-col sm:flex-row mx-auto
 }
 .footer-container div{
-  @apply w-1/4 mx-auto flex flex-col justify-start items-center py-5 px-3
+  @apply w-3/4 sm:w-1/4 mx-auto flex flex-col justify-start items-start sm:items-center py-5 px-3
 }
 .footer-container h2{
   @apply text-2xl py-3
@@ -260,11 +300,14 @@
 .footer-contacts li{
   @apply flex justify-start items-center gap-2
 }
+.reach-us-input{
+  @apply w-full flex flex-col items-center justify-center gap-2 sm:flex-row p-2 rounded-lg
+}
 .footer-reach-us input{
-  @apply h-8 px-2 mr-2 text-black rounded-lg
+  @apply h-8 px-2 mr-2 text-black rounded-lg w-full
 }
 .footer-reach-us button{
-  @apply bg-green-600 text-white p-2 rounded-lg
+  @apply bg-green-600 text-white p-2 rounded-lg w-full
 }
 .footer-gallery-section{
   @apply flex flex-col items-center justify-start

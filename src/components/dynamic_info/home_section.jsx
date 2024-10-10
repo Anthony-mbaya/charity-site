@@ -10,7 +10,7 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
 import { FaCalendar, FaDollarSign } from "react-icons/fa";
-import { ReactTyped } from 'react-typed';
+import { ReactTyped } from "react-typed";
 export const HomeSection = () => {
   return (
     <div className="home-section">
@@ -19,6 +19,13 @@ export const HomeSection = () => {
         <TypedComponent />
         <h1>ENRICHING SOCIETIES</h1>
         <button>DONATE</button>
+        <p className="image-container-text">
+          At <b>X charity organization</b>, we believe in the power of kindness and the
+          strength of community. Our mission is to make a difference in the
+          lives of those in need by providing support, hope, and a helping hand.
+          Whether you're here to learn about our programs, volunteer, or donate,
+          we are grateful for your interest and compassion.
+        </p>
       </div>
       {/* image slider with links to specific */}
       <ImageSlider />
@@ -69,16 +76,16 @@ export const HomeSection = () => {
     </div>
   );
 };
-function TypedComponent(){
-    return(
-        <ReactTyped
-        strings={['Welcome to our website', 'We are glad you are here']}
-        typeSpeed={100}
-        backSpeed={50}
-        loop
-        className="typed-text"
-         />
-    )
+function TypedComponent() {
+  return (
+    <ReactTyped
+      strings={["Welcome to our website", "We are glad you are here"]}
+      typeSpeed={100}
+      backSpeed={50}
+      loop
+      className="typed-text"
+    />
+  );
 }
 
 // image slider component
@@ -86,20 +93,29 @@ function ImageSlider() {
   return (
     <Swiper
       spaceBetween={30}
-      slidesPerView={4}
+      slidesPerView={1}
       navigation
       modules={[Navigation, Pagination, Scrollbar]}
       scrollbar={{ draggable: true }}
       pagination={{ clickable: true }}
       autoplay={{ delay: 500 }}
       className="mySwiper"
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      }}
     >
       {slider_image_list.map((image, index) => (
         <SwiperSlide key={index} className="swiperSlide">
           <img src={image.image} alt={image.alt} />
-          <button>
-            {image.btn_text}
-          </button>
+          <button>{image.btn_text}</button>
           <p>{image.text}</p>
         </SwiperSlide>
       ))}
@@ -125,7 +141,7 @@ function EventsTable() {
           <td>10:00 AM - 12:00 PM</td>
           <td>12/12/2024</td>
         </tr>
-        <hr />
+
         <tr>
           <td>Event 2</td>
           <td>12:00 AM - 2:00 PM</td>

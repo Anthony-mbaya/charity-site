@@ -30,7 +30,7 @@ export const Footer = () => {
       {/* footer reach us section */}
       <div className="footer-reach-us">
         <h2>Reach us</h2>
-        <span>
+        <span className='reach-us-input' >
             <input type="email" name="email"  />
             <button>send</button>
         </span>
