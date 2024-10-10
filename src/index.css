@@ -122,10 +122,23 @@
 }
 /*services section*/
 .services{
-  @apply sm:container w-screen py-2 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
+  @apply sm:container w-screen py-2 sm:py-5 sm:my-10 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
 }
 .services li{
-  @apply w-1/2 sm:w-auto text-center px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse
+  @apply w-1/2 sm:w-auto text-center px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse;
+  @apply flex flex-col gap-3
+}
+.services li:first-child span{
+  @apply bg-sustainability-icon bg-cover bg-center mx-auto w-16 h-16 rounded-lg shadow-lg shadow-slate-800
+}
+.services li:nth-child(2) span{
+  @apply bg-orphan-icon bg-cover bg-center mx-auto w-16 h-16 rounded-lg shadow-lg shadow-slate-800
+}
+.services li:nth-child(3) span{
+  @apply bg-workshop-icon bg-cover bg-center mx-auto w-16 h-16 rounded-lg shadow-lg shadow-slate-800
+}
+.services li:last-child span{
+  @apply bg-support-icon bg-cover bg-center mx-auto w-16 h-16 rounded-lg shadow-lg shadow-slate-800
 }
 /*volunteer*/
 .volunteer{
@@ -163,7 +176,7 @@
   @apply w-3/5
 }
 .support1 button{
-  @apply bg-green-500 px-4 py-2
+  @apply bg-green-500 px-4 py-2 w-1/3 flex justify-center shadow-lg shadow-slate-600 rounded-md
 }
 .support2 h1{
   @apply text-3xl font-bold break-words flex flex-col gap-3
@@ -192,7 +205,7 @@
   @apply sm:container text-sm w-full sm:h-[60vh] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-3 items-center
 }
 .plan{
-  @apply bg-gradient-to-r from-slate-200 via-transparent to-slate-200 max-w-[1240px] w-4/6 px-4 py-8 shadow-2xl shadow-slate-600 rounded-lg hover:scale-105 duration-300 mx-auto hover:opacity-90 cursor-context-menu flex flex-col justify-center items-center gap-3
+  @apply bg-gradient-to-r from-slate-200 via-transparent to-slate-200 max-w-[1240px] w-5/6 sm:w-4/6 px-4 py-8 shadow-2xl shadow-slate-600 rounded-lg hover:scale-105 duration-300 mx-auto hover:opacity-90 cursor-context-menu flex flex-col justify-center items-center gap-3
 }
 .plan h1{
   @apply text-2xl text-green-500 font-bold

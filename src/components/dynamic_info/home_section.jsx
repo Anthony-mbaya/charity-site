@@ -9,7 +9,7 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 //SwiperCore.use([Pagination, Navigation]); // swiper modules
 import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
-import { FaCalendar, FaDollarSign } from "react-icons/fa";
+import { FaCalendar, FaCoins } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 export const HomeSection = () => {
   return (
@@ -31,17 +31,17 @@ export const HomeSection = () => {
       <ImageSlider />
       {/* services componet */}
       <ul className="services">
-        <li>New Sustainability</li>
-        <li>Orphans</li>
-        <li>Workshops</li>
-        <li>Ethical Support</li>
+        <li><span></span>New Sustainability</li>
+        <li><span></span>Orphans</li>
+        <li><span></span>Workshops</li>
+        <li><span></span>Ethical Support</li>
       </ul>
       {/* volunteer section */}
       <div className="volunteer">
         <p>| help to those who need it</p>
         <h1>Each donation is an essential help for everyone's life</h1>
         <div className="register">
-          <img src="src/assets/images/download (1).jpeg" alt="" />
+          <img src="public/images/donation.jpeg" alt="donation image" />
           <h2>Become a Member</h2>
           <button>REGISTER</button>
         </div>
@@ -55,7 +55,7 @@ export const HomeSection = () => {
             Values through Charitable Endeavors by clicking the Button Below
           </p>
           <button>
-            <FaDollarSign />
+            <FaCoins />
           </button>
         </div>
         <div className="support2">
