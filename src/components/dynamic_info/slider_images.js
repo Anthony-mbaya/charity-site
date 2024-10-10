@@ -1,7 +1,8 @@
+import slider1 from '../images/download (1).jpeg';
 const slider_image_list = [
     {
         "id": 1,
-        "image": "src/assets/images/download (1).jpeg",
+        "image": slider1,
         "alt": "First slide image",
         'btn_text':'slider1',
     },
