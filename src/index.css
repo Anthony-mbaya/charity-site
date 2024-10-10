@@ -122,7 +122,7 @@
 }
 /*services section*/
 .services{
-  @apply sm:container w-screen py-2 sm:py-5 sm:my-10 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md shadow-lg shadow-slate-700
+  @apply sm:container w-screen py-2 sm:py-5 sm:my-10 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md
 }
 .services li{
   @apply w-1/2 sm:w-auto text-center px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse;
@@ -154,7 +154,7 @@
   @apply flex flex-col gap-2 justify-center items-center py-5
 }
 .register img{
-  @apply w-[25rem] rounded-xl shadow-xl shadow-slate-500
+  @apply sm:w-[25rem] object-cover object-center rounded-xl shadow-xl shadow-slate-500
 }
 .volunteer h2{
   @apply text-sm text-green-600 my-3 font-bold
@@ -183,13 +183,13 @@
 }
 /* events section table */
 .events{
-  @apply sm:container w-full sm:w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-3 rounded-xl shadow-xl shadow-gray-500 px-2
+  @apply sm:container w-full sm:w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-5 shadow-xl shadow-gray-500 px-2
 }
 .events thead tr{
   @apply flex justify-between items-center
 }
 .events th{
-  @apply text-xl text-white w-full text-center
+  @apply text-lg sm:text-xl text-white w-full text-center
 }
 .events .calendar{
   @apply w-fit mx-auto
@@ -202,16 +202,16 @@
 }
 /* contribution plans */
 .contribution-plan{
-  @apply sm:container text-sm w-full sm:h-[60vh] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-3 items-center
+  @apply sm:container text-sm w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-3 items-center
 }
 .plan{
-  @apply bg-gradient-to-r from-slate-200 via-transparent to-slate-200 max-w-[1240px] w-5/6 sm:w-4/6 px-4 py-8 shadow-2xl shadow-slate-600 rounded-lg hover:scale-105 duration-300 mx-auto hover:opacity-90 cursor-context-menu flex flex-col justify-center items-center gap-3
+  @apply font-light bg-gradient-to-r from-slate-200 via-transparent to-slate-200 max-w-[1240px] w-5/6 sm:w-4/6 px-4 py-8 shadow-2xl shadow-slate-600 rounded-lg hover:scale-105 duration-300 mx-auto hover:opacity-90 cursor-context-menu flex flex-col justify-center items-center gap-3
 }
 .plan h1{
   @apply text-2xl text-green-500 font-bold
 }
 .plan h2{
-  @apply text-[1rem] text-blue-500 font-bold
+  @apply text-[1rem] text-blue-500 font-bold text-center
 }
 .plan p{
   @apply text-blue-600 font-semibold
@@ -227,7 +227,7 @@
 }
 /* steps */
 .steps-to-follow{
-  @apply sm:container sm:w-8/12 mx-auto my-2 py-4 px-4 flex flex-col gap-5 sm:flex-row sm:gap-16
+  @apply sm:container w-full md:w-8/12 mx-auto my-2 py-4 px-4 flex flex-col gap-5 sm:flex-row sm:gap-16
 }
 .step1{
   @apply bg-green-500 p-4 flex gap-5 justify-center items-center rounded-md shadow-lg shadow-slate-500
@@ -243,13 +243,13 @@
 }
 /* join sectiopn */
 .join{
-  @apply flex flex-col sm:flex-row px-4
+  @apply flex flex-col sm:flex-row px-4 sm:h-[40vh] md:h-[60vh] text-white border-2 border-red-500
 }
 .join img{
-  @apply sm:w-2/3 h-1/2
+  @apply sm:w-2/3 h-full
 }
 .join-info{
-  @apply bg-home_bg opacity-70 py-4 text-white text-center flex flex-col gap-3 justify-center items-center
+  @apply bg-bg1 h-full opacity-70 py-4 text-center flex flex-col gap-3 justify-center items-center
 }
 .join-info h1{
   @apply text-xl font-bold my-2
@@ -299,7 +299,7 @@
   @apply flex flex-col sm:flex-row mx-auto
 }
 .footer-container div{
-  @apply w-3/4 sm:w-1/4 mx-auto flex flex-col justify-start items-start sm:items-center py-5 px-3
+  @apply w-3/4 sm:w-1/4 mx-auto flex flex-col justify-start items-start sm:items-center py-2 sm:py-5 px-3
 }
 .footer-container h2{
   @apply text-2xl py-3
@@ -314,10 +314,10 @@
   @apply flex justify-start items-center gap-2
 }
 .reach-us-input{
-  @apply w-full flex flex-col items-center justify-center gap-2 p-2 rounded-lg
+  @apply w-full flex flex-col items-start justify-start gap-2 sm:p-2 rounded-lg
 }
 .footer-reach-us input{
-  @apply h-8 px-2 mr-2 text-black rounded-lg w-full
+  @apply h-8 px-2 text-black rounded-lg w-full
 }
 .footer-reach-us button{
   @apply bg-green-600 text-white p-2 rounded-lg w-full

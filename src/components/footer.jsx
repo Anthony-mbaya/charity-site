@@ -39,9 +39,9 @@ export const Footer = () => {
       <div className="footer-gallery-section">
         <h2>Gallery</h2>
         <div className="footer-images">
-            <FooterImage src={'src/assets/images/download (2).jpeg'} alt={'image1'} />
-            <FooterImage src={'src/assets/images/download.jpeg'} alt={'image2'} />
-            <FooterImage src={'src/assets/images/HD-wallpaper-technology-code-programmer-minimalist.jpg'} alt={'image3'} />
+            <FooterImage src={'/images/project3.jpeg'} alt={'proj 3 img'} />
+            <FooterImage src={'/images/image2-hands.jpeg'} alt={'hands img'} />
+            <FooterImage src={'/images/project4.jpeg'} alt={'proj4'} />
         </div>
       </div>
       </div>

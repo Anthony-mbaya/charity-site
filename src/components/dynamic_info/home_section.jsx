@@ -55,7 +55,7 @@ export const HomeSection = () => {
             Values through Charitable Endeavors by clicking the Button Below
           </p>
           <button>
-            <FaCoins />
+            <FaCoins color="gold" size={25} />
           </button>
         </div>
         <div className="support2">
@@ -226,7 +226,7 @@ function Join() {
   return (
     <div className="join">
       <img
-        src="src/assets/images/HD-wallpaper-technology-code-programmer-minimalist.jpg"
+        src="/images/join-together.jpeg"
         alt="join image"
       />
       <div className="join-info">
