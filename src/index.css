@@ -301,7 +301,7 @@
   @apply flex justify-start items-center gap-2
 }
 .reach-us-input{
-  @apply w-full flex flex-col items-center justify-center gap-2 sm:flex-row p-2 rounded-lg
+  @apply w-full flex flex-col items-center justify-center gap-2 p-2 rounded-lg
 }
 .footer-reach-us input{
   @apply h-8 px-2 mr-2 text-black rounded-lg w-full
