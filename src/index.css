@@ -8,37 +8,46 @@
 /* platform links */
 .platform-links{
   @apply w-screen h-fit sm:container bg-black bg-opacity-80 text-white;
-  @apply text-sm fixed top-1 inset-0 sm:mx-auto sm:flex justify-center sm:justify-between;
-  @apply p-2 sm:rounded-md sm:rounded-b-none z-10;
+  @apply text-sm fixed top-0 inset-0 sm:mx-auto flex justify-center sm:justify-between;
+  @apply p-1 sm:p-2 sm:rounded-md sm:rounded-b-none z-10;
 }
 .platform-links1{
-  @apply flex justify-start gap-2
+  @apply flex justify-start gap-0 sm:gap-2 flex-wrap items-center
 }
 .platform-links1 span{
   @apply flex gap-1 justify-center items-center
 }
+.platform-links1 span a{
+  @apply underline underline-offset-2 cursor-pointer hover:text-[#4ebccb]
+}
 .platform-links2 ul{
-  @apply hidden sm:flex gap-2 justify-center items-center sm:px-8
+  @apply grid grid-cols-2 gap-0 sm:grid-cols-4 md:flex sm:gap-2 justify-center items-center sm:px-8
 }
 .platform-links2 ul li:first-child{
-  @apply hover:text-white cursor-text
+  @apply hover:text-white cursor-text hidden md:block
 }
 .platform-links2 ul li{
-  @apply cursor-pointer hover:text-slate-400
+  @apply cursor-pointer hover:text-[#4ebccb] px-3 sm:px-0 py-[0.19rem]
 }
 /* navbar */
 .nav-container{
-  @apply w-screen h-fit inset-0 bg-white bg-opacity-80 text-slate-950 text-sm;
-  @apply px-2 py-2 sm:py-4 sm:rounded-md sm:rounded-t-none z-10 sm:container;
-  @apply fixed top-[2.46rem] sm:top-10 sm:mx-auto flex justify-between items-center;
+  @apply w-screen h-fit inset-0 bg-[#4ebccb] bg-opacity-80 text-slate-950 text-sm;
+  @apply px-2 py-1 sm:py-2 sm:rounded-md sm:rounded-t-none z-10 sm:container;
+  @apply fixed top-[3.05rem] sm:top-10 sm:mx-auto flex justify-between items-center;
+}
+.title-wrapper{
+  @apply flex flex-col sm:flex-row items-center justify-center
+}
+.logo{
+  @apply w-16 h-16 rounded-full object-cover object-center shadow-lg shadow-slate-900
 }
 .title{
-  @apply text-[2em] sm:text-[1.6em] text-center py-4 sm:py-1 w-fit
+  @apply text-[1.2em] sm:text-[1.6em] text-center py-1 sm:py-1 w-fit text-white
 }
 .hamburger-tag{
   @apply px-4 sm:hidden
 }
-.hamburger{
+.hamburger-tag{
   @apply text-2xl cursor-pointer text-white
 }
 /* normal navigation bart */
@@ -81,13 +90,16 @@
 }
 /* home section with dynamic details */
 .home-section{
-  @apply sm:container w-full mx-auto mt-[5.4rem] sm:mt-[5.4rem] py-3
+  @apply sm:container w-full mx-auto mt-[8.4rem] sm:mt-[5.4rem] py-3
 }
 .image-container{
-  @apply bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3
+  @apply relative bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3;
+}
+.faded-overlay{
+  @apply absolute inset-0 bg-black bg-opacity-40
 }
 .typed-text{
-  @apply text-lg sm:text-4xl font-extralight font-sans px-5 py-2 sm:py-2 rounded-2xl h-10 sm:h-16 sm:my-2
+  @apply text-lg sm:text-4xl font-extralight font-sans px-5 py-2 sm:py-2 rounded-2xl h-20 w-full sm:h-16 sm:my-2;
 }
 .image-container h1{
   @apply text-4xl font-bold font-sans py-7 px-10 border-4 shadow-2xl shadow-black rounded-2xl border-r-transparent border-white w-fit animate-pulse my-5
@@ -96,9 +108,16 @@
   @apply bg-yellow-600 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black animate-bounce hover:bg-yellow-900
 }
 .image-container-text{
-  @apply text-[1rem] sm:text-sm md:text-lg font-light font-sans sm:px-2 py-4 w-full sm:w-4/5
+  @apply text-[1rem] sm:text-sm md:text-lg font-light font-sans sm:px-2 py-4 w-full sm:w-4/5;
+  @apply bg-[#4ebccb] bg-opacity-70 px-4 rounded-xl font-extralight text-center;
 }
 /* swiper compinent */
+.swiper-button-prev,.swiper-button-next {
+  @apply bg-black bg-opacity-30 text-yellow-500 rounded-md
+}
+.swiper-pagination-bullet{
+  @apply bg-yellow-500
+}
 .swiper-container{
   @apply w-full h-auto
 }
@@ -106,16 +125,16 @@
   @apply flex justify-center items-center
 }
 .mySwiper{
-  @apply px-3 h-[50vh] sm:h-[60vh] w-full my-2 py-3
+  @apply px-3 h-[50vh] sm:h-[60vh] w-full sm:my-2 py-6 sm:py-3
 }
 .swiperSlide{
-  @apply h-1/2 my-auto sm:h-full w-full flex flex-col justify-center items-center
+  @apply my-auto sm:h-full w-full flex flex-col gap-2 justify-center items-center
 }
 .swiperSlide img{
   @apply object-cover object-center mx-auto h-full w-[50rem] sm:w-[32rem] rounded-xl shadow-xl shadow-slate-500
 }
 .swiperSlide button{
-  @apply fixed bottom-7 bg-yellow-500 hover:bg-yellow-800 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black
+  @apply fixed bottom-3 text-white bg-yellow-500 hover:bg-yellow-800 w-fit px-4 py-2 mx-auto shadow-2xl shadow-black opacity-80
 }
 .swiperSlide p{
   @apply text-xl text-blue-600
@@ -164,19 +183,19 @@
 }
 /* support section */
 .support{
-  @apply sm:container h-[70vh] bg-slate-300 flex flex-col sm:flex-row justify-around items-center p-3
+  @apply sm:container h-[70vh] sm:h-fit bg-slate-300 flex flex-col sm:flex-row justify-around items-center p-3
 }
 .support1{
-  @apply bg-white bg-opacity-70 sm:w-2/5 p-2 sm:p-5 flex flex-col justify-center gap-6 h-3/5 sm:h-4/5 items-center shadow-xl shadow-slate-600 rounded-xl
+  @apply bg-white bg-opacity-70 sm:w-2/5 p-2 sm:p-5 flex flex-col justify-center gap-6 h-fit items-center shadow-xl shadow-slate-600 rounded-xl
 }
 .support1 h1{
-  @apply text-center text-2xl text-green-500 font-bold border-b-2 border-green-600 w-fit
+  @apply text-center text-2xl sm:text-xl text-green-500 font-bold border-b-2 border-green-600 w-fit
 }
 .support1 p{
-  @apply w-3/5
+  @apply w-3/5 sm:w-full sm:text-sm
 }
 .support1 button{
-  @apply bg-green-500 px-4 py-2 w-1/3 flex justify-center shadow-lg shadow-slate-600 rounded-md
+  @apply bg-green-500 px-4 sm:px-3 sm:py-1 py-2 w-1/3 flex justify-center shadow-lg shadow-slate-600 rounded-md
 }
 .support2 h1{
   @apply text-3xl font-bold break-words flex flex-col gap-3
@@ -243,7 +262,7 @@
 }
 /* join sectiopn */
 .join{
-  @apply flex flex-col sm:flex-row px-4 sm:h-[40vh] md:h-[60vh] text-white border-2 border-red-500
+  @apply flex flex-col sm:flex-row px-4 sm:h-[40vh] md:h-[60vh] text-white
 }
 .join img{
   @apply sm:w-2/3 h-full
@@ -274,10 +293,10 @@
   @apply w-3/5 mx-auto my-2 text-blue-600
 }
 .updates-list{
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto w-full
+  @apply grid grid-cols-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 gap-10 mx-auto w-full
 }
 .update-item{
-  @apply w-4/5 h-fit mx-auto
+  @apply w-4/5 h-fit mx-auto flex flex-col
 }
 .update-item img{
   @apply h-1/2 w-full
@@ -289,17 +308,17 @@
   @apply text-xl font-bold uppercase underline underline-offset-4
 }
 .update-item button{
-  @apply bg-blue-600 text-white w-full my-3 py-2 rounded-lg hover:bg-blue-900
+  @apply bg-blue-600 text-white w-fit mx-auto my-3 py-2 px-10 sm:px-24 rounded-lg hover:bg-blue-900
 }
 /* footer section */
 .footer{
   @apply sm:container text-sm pt-3 mx-auto bg-slate-900  text-white flex flex-col
 }
 .footer-container{
-  @apply flex flex-col sm:flex-row mx-auto
+  @apply flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto
 }
 .footer-container div{
-  @apply w-3/4 sm:w-1/4 mx-auto flex flex-col justify-start items-start sm:items-center py-2 sm:py-5 px-3
+  @apply w-3/4 sm:w-3/4 mx-auto flex flex-col justify-start items-start sm:items-center py-2 sm:py-2 px-1
 }
 .footer-container h2{
   @apply text-2xl py-3
@@ -329,5 +348,5 @@
   @apply grid grid-cols-2 gap-2 w-full
 }
 .footer .copy{
-  @apply px-2 py-2
+  @apply px-2 sm:px-14 py-2
 }

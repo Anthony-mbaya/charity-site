@@ -16,15 +16,15 @@ export const HomeSection = () => {
     <div className="home-section">
       {/* welcome image and information blow up */}
       <div className="image-container">
+      <div className="faded-overlay"></div>
         <TypedComponent />
         <h1>ENRICHING SOCIETIES</h1>
         <button>DONATE</button>
         <p className="image-container-text">
-          At <b>X charity organization</b>, we believe in the power of kindness and the
+          At <b>Hopeful Foundation</b>, we believe in the power of kindness and the
           strength of community. Our mission is to make a difference in the
           lives of those in need by providing support, hope, and a helping hand.
-          Whether you're here to learn about our programs, volunteer, or donate,
-          we are grateful for your interest and compassion.
+          Thank you!
         </p>
       </div>
       {/* image slider with links to specific */}
@@ -123,6 +123,7 @@ function ImageSlider() {
   );
 }
 
+//events component
 function EventsTable() {
   return (
     <table className="events">
@@ -137,15 +138,9 @@ function EventsTable() {
       </thead>
       <tbody>
         <tr>
-          <td>Event 1</td>
-          <td>10:00 AM - 12:00 PM</td>
-          <td>12/12/2024</td>
-        </tr>
-
-        <tr>
-          <td>Event 2</td>
-          <td>12:00 AM - 2:00 PM</td>
-          <td>1/1/2024</td>
+          <td>Visit To Great Hope Children's Home</td>
+          <td>Morning - To be confirmed</td>
+          <td>27/10/2024</td>
         </tr>
       </tbody>
     </table>
@@ -226,7 +221,7 @@ function Join() {
   return (
     <div className="join">
       <img
-        src="/images/join-together.jpeg"
+        src="/images/real-4-eating.jpg"
         alt="join image"
       />
       <div className="join-info">

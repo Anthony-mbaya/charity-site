@@ -31,7 +31,7 @@ export const Footer = () => {
       <div className="footer-reach-us">
         <h2>Reach us</h2>
         <span className='reach-us-input' >
-            <input type="email" name="email"  />
+            <input type="email" placeholder='email' name="email"  />
             <button>send</button>
         </span>
       </div>

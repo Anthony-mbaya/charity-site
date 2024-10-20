@@ -1,40 +1,39 @@
-import hands1 from '/images/image1-hands.jpeg';
-import underHat from '/images/under-hat.jpeg';
-import hands2 from '/images/image2-hands.jpeg';
-import handsUp from '/images/hands-up.jpg';
+import frontview from '/images/real-5-front-view.jpg';
+import eating from '/images/real-4-eating.jpg';
+import depression from '/images/real-6-depression.jpg';
+import underTent from '/images/real-3-under-tent.jpg';
 import child from '/images/bg2.avif';
 const slider_image_list = [
     {
         "id": 1,
-        "image": hands1,
-        "alt": "First slide image",
-        'btn_text':'slider1',
+        "image": frontview,
+        "alt": "frontview slide image",
+        'btn_text':'donate',
     },
     {
         "id": 2,
-        "image": underHat,
-        "alt": "Second slide image",
-        'btn_text':'slider2',
+        "image": eating,
+        "alt": "Eating slide image",
+        'btn_text':'more',
     },
     {
         "id": 3,
-        "image": hands2,
-        "alt": "Third slide image",
-        'btn_text':'slider3',
+        "image": depression,
+        "alt": "depression slide image",
+        'btn_text':'more',
     },
     {
         "id": 4,
-        "image": handsUp,
-        "alt": "Fourth slide image",
-        'btn_text':'slider4',
+        "image": underTent,
+        "alt": "undertent slide image",
+        'btn_text':'more',
     },
 
     {
         'id': 5,
         'image': child,
         'alt': 'child image',
-        'text':'hello world',
-        'btn_text':'slider5',
+        'btn_text':'more',
     },
 ];
 export default slider_image_list;

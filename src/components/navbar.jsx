@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaAngleDown, FaHamburger, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import logo from '/images/logo.jpg';
 export const Navbar = () => {
   const [showArrow, setShowArrow] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
@@ -72,7 +73,7 @@ export const Navbar = () => {
             ]}
           />
           <NavListLink link={"/causes"} text={"Causes"} />
-          <NavListLink link={"/donate-now"} text={"Donate Now"} />
+          <NavListLink link={"/donate-now"} text={"Donate"} />
           <NavListLink link={"/resources"} text={"Resources"} />
           <NavListLink link={"/contacts"} text={"Contacts"} />
           <NavListLink link={"/events"} text={"Events"} />
@@ -82,7 +83,10 @@ export const Navbar = () => {
   }
   return (
     <nav className="nav-container">
-      <h1 className="title">x-organization</h1>
+      <span className="title-wrapper">
+        <img className="logo" src={logo} alt="logo" />
+      <h1 className="title">Hopeful Foundation</h1>
+      </span>
       <span className="hamburger-tag">
         {showMenu && <FaHamburger onClick={toggleBar} size={25} />}
       </span>
@@ -97,7 +101,7 @@ export const Navbar = () => {
           ]}
         />
         <NavListLink link={"/causes"} text={"Causes"} />
-        <NavListLink link={"/donate-now"} text={"Donate Now"} />
+        <NavListLink link={"/donate-now"} text={"Donate"} />
         <NavListLink link={"/resources"} text={"Resources"} />
         <NavListLink link={"/contacts"} text={"Contacts"} />
         <NavListLink link={"/events"} text={"Events"} />
