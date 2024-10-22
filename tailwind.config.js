@@ -14,6 +14,8 @@ export default {
         'support-icon': 'url("/images/support-icon.jpeg")',
         'orphan-icon': 'url("/images/orphan-icon.jpeg")',
         'workshop-icon': 'url("/images/workshop-icon.png")',
+        'real-2-advert': 'url("/images/real-2-advert.jpg")',
+        'real-5-front-view': 'url("/images/real-5-front-view.jpg")',
       }
     },
   },

@@ -61,7 +61,7 @@ export const Navbar = () => {
       <div className="sidebar">
         <ul className="nav-links">
           <span className="close-sidebar">
-            <FaTimes size={30} onClick={toggleBar} />
+            <FaTimes size={25} onClick={toggleBar} />
           </span>
           <NavListLink link={"/"} text={"Home"} />
           <NavListLink
@@ -85,7 +85,7 @@ export const Navbar = () => {
     <nav className="nav-container">
       <span className="title-wrapper">
         <img className="logo" src={logo} alt="logo" />
-      <h1 className="title">Hopeful Foundation</h1>
+      <h1 className="title"><span>Hopeful</span> <span>Foundation</span></h1>
       </span>
       <span className="hamburger-tag">
         {showMenu && <FaHamburger onClick={toggleBar} size={25} />}

@@ -9,20 +9,20 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 //SwiperCore.use([Pagination, Navigation]); // swiper modules
 import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
-import { FaCalendar, FaCoins } from "react-icons/fa";
+import { FaCalendar, FaCoins, FaDonate, FaInfoCircle } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 export const HomeSection = () => {
   return (
     <div className="home-section">
       {/* welcome image and information blow up */}
       <div className="image-container">
-      <div className="faded-overlay"></div>
+        <div className="faded-overlay"></div>
         <TypedComponent />
         <h1>ENRICHING SOCIETIES</h1>
         <button>DONATE</button>
         <p className="image-container-text">
-          At <b>Hopeful Foundation</b>, we believe in the power of kindness and the
-          strength of community. Our mission is to make a difference in the
+          At <b>Hopeful Foundation</b>, we believe in the power of kindness and
+          the strength of community. Our mission is to make a difference in the
           lives of those in need by providing support, hope, and a helping hand.
           Thank you!
         </p>
@@ -31,10 +31,18 @@ export const HomeSection = () => {
       <ImageSlider />
       {/* services componet */}
       <ul className="services">
-        <li><span></span>New Sustainability</li>
-        <li><span></span>Orphans</li>
-        <li><span></span>Workshops</li>
-        <li><span></span>Ethical Support</li>
+        <li>
+          <span></span>New Sustainability
+        </li>
+        <li>
+          <span></span>Orphans
+        </li>
+        <li>
+          <span></span>Workshops
+        </li>
+        <li>
+          <span></span>Ethical Support
+        </li>
       </ul>
       {/* volunteer section */}
       <div className="volunteer">
@@ -148,44 +156,66 @@ function EventsTable() {
 }
 
 function ContributionPlans() {
+  function Plan({ kes, l1, l2, l3, l4 }) {
+    return (
+      <div className="plan">
+        <span>
+          <h2>Join Us Monthly</h2>
+          <h1>{kes}</h1>
+          <h2>Make a Difference!</h2>
+        </span>
+        <ul>
+          <li>
+            <FaInfoCircle /> {l1}
+          </li>
+          <li>
+            <FaInfoCircle /> {l2}
+          </li>
+          <li>
+            <FaInfoCircle /> {l3}
+          </li>
+          <li>
+            <FaInfoCircle /> {l4}
+          </li>
+        </ul>
+        <button>
+          Go Plan <FaDonate />
+        </button>
+      </div>
+    );
+  }
   return (
     <div className="contribution-plan">
-      <div className="plan">
+      <h2>Hopeful Foundation Merchandise Membership Card</h2>
+      <div className="plan-intro">
         <h1>Choose PLan</h1>
         <p>
-          Tailored for You: Discover the Perfect Plan that Matches Your Passion
-          for Creating Positiv
+          Discover the Perfect Plan that Matches Your Passion for Creating
+          Positive support of any kind.
         </p>
         <button>More</button>
       </div>
-      <div className="plan">
-        <span>
-          <h2>Monthly</h2>
-          <h1>Kes 500</h1>
-          <h2>Recurring</h2>
-        </span>
-        <ul>
-          <li>Community Outreac</li>
-          <li>Educational Support</li>
-          <li>Nutritional Assistance</li>
-          <li>Childrens Home Visits</li>
-        </ul>
-        <button>Go Plan</button>
-      </div>
-      <div className="plan">
-        <span>
-          <h2>Semi-Annually</h2>
-          <h1>Kes 2500</h1>
-          <h2>Recurring</h2>
-        </span>
-        <ul>
-          <li>Community Outreac</li>
-          <li>Educational Support</li>
-          <li>Nutritional Assistance</li>
-          <li>Childrens Home Visits</li>
-        </ul>
-        <button>Go Plan</button>
-      </div>
+      <Plan
+        kes="KES 500"
+        l1="Monthly Contribution"
+        l2="Supports 10 Children"
+        l3="Basic Medical Supplies"
+        l4="Free T-Shirt"
+      />
+      <Plan
+        kes="KES 1500"
+        l1="School Supplies"
+        l2="Healthcare Access"
+        l3="Nutrition Programs"
+        l4="Emergency Relief Fund"
+      />
+      <Plan
+        kes="KES 2500"
+        l1="Scholarship Assistance"
+        l2="Vaccination Campaigns"
+        l3="Housing Support"
+        l4="Skill Development Training"
+      />
     </div>
   );
 }
@@ -220,11 +250,9 @@ function StepsToFollow() {
 function Join() {
   return (
     <div className="join">
-      <img
-        src="/images/real-4-eating.jpg"
-        alt="join image"
-      />
+      <img src="/images/real-4-eating.jpg" alt="join image" />
       <div className="join-info">
+        <div className="faded-overlay"></div>
         <h1>Why Join Our Community</h1>
         <p>
           ves you the chance to be part of a compassionate community dedicated
