@@ -16,13 +16,14 @@ export const Navbar = () => {
   const handleMouseLeave = () => {
     setShowArrow(false);
   };
-  function NavListLink({ text, link, dropDown }) {
+  function NavListLink({ text, link, dropDown, onClick }) {
     return (
       <li
         className="nav-link"
         onMouseEnter={dropDown ? handleMouseEnter : null}
         onMouseLeave={dropDown ? handleMouseLeave : null}
         //onClick={dropDown ? handleArrow : null}
+        onClick={onClick}
       >
         <NavLink
           to={link}
@@ -58,12 +59,12 @@ export const Navbar = () => {
   };
   function SideBar() {
     return (
-      <div className="sidebar">
+      <div className={`sidebar ${ !showMenu ? "block" : "hidden" }`}>
         <ul className="nav-links">
           <span className="close-sidebar">
             <FaTimes size={25} onClick={toggleBar} />
           </span>
-          <NavListLink link={"/"} text={"Home"} />
+          <NavListLink link={"/"} text={"Home"} onClick={toggleBar} />
           <NavListLink
             link={"/about"}
             text={"About"}
@@ -73,8 +74,8 @@ export const Navbar = () => {
             ]}
           />
           <NavListLink link={"/causes"} text={"Causes"} />
-          <NavListLink link={"/donate-now"} text={"Donate"} />
-          <NavListLink link={"/resources"} text={"Resources"} />
+          <NavListLink link={"/donate"} text={"Donate"} />
+          <NavListLink link={"/projects"} text={"Projects"} />
           <NavListLink link={"/contacts"} text={"Contacts"} />
           <NavListLink link={"/events"} text={"Events"} />
         </ul>
@@ -101,8 +102,8 @@ export const Navbar = () => {
           ]}
         />
         <NavListLink link={"/causes"} text={"Causes"} />
-        <NavListLink link={"/donate-now"} text={"Donate"} />
-        <NavListLink link={"/resources"} text={"Resources"} />
+        <NavListLink link={"/donate"} text={"Donate"} />
+        <NavListLink link={"/projects"} text={"Projects"} />
         <NavListLink link={"/contacts"} text={"Contacts"} />
         <NavListLink link={"/events"} text={"Events"} />
       </ul>

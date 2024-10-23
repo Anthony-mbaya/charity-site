@@ -293,3 +293,4 @@ function UpdatesNews() {
     </div>
   );
 }
+export default UpdatesNews;

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .home-container{
-  @apply w-full sm:container mx-auto py-1
+  @apply w-full sm:container mx-auto py-1 pt-[7rem] sm:pt-[6.9rem]
 }
 /* platform links */
 .platform-links{
@@ -93,7 +93,7 @@
 }
 /* home section with dynamic details */
 .home-section{
-  @apply sm:container w-full mx-auto mt-[6.6rem] sm:mt-[6.5rem] py-3
+  @apply sm:container w-full mx-auto py-3
 }
 .image-container{
   @apply relative bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3;
