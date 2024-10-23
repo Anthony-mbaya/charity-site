@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .home-container{
-  @apply w-full sm:container mx-auto py-1 pt-[7rem] sm:pt-[6.9rem]
+  @apply w-full sm:container mx-auto py-1 pt-[7rem] sm:pt-[6.1rem]
 }
 /* platform links */
 .platform-links{
   @apply w-screen h-fit sm:container bg-black bg-opacity-80 text-white;
   @apply text-sm fixed top-0 inset-0 sm:mx-auto flex justify-center sm:justify-between;
-  @apply p-1 sm:p-2 sm:rounded-md sm:rounded-b-none z-10;
+  @apply p-1 sm:py-[0.1rem] sm:rounded-md sm:rounded-b-none z-10;
 }
 .platform-links1{
   @apply flex justify-start gap-0 sm:gap-2 flex-wrap items-center
@@ -33,7 +33,7 @@
 .nav-container{
   @apply w-screen h-fit inset-0 bg-[#4ebccb] bg-opacity-80 text-slate-950 text-sm;
   @apply px-2 py-1 sm:py-2 sm:rounded-md sm:rounded-t-none z-10 sm:container;
-  @apply fixed top-[3.05rem] sm:top-10 sm:mx-auto flex justify-between items-center;
+  @apply fixed top-[3.05rem] sm:top-[1.8rem] sm:mx-auto flex justify-between items-center;
 }
 .title-wrapper{
   @apply flex flex-row gap-2 items-center justify-center
