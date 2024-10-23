@@ -67,8 +67,8 @@ export const HomeSection = () => {
           </button>
         </div>
         <div className="support2">
-          <h1>30+ Volunteers </h1>
-          <h1>70+ Support Now</h1>
+          <h1>130+ Volunteers </h1>
+          <h1>100+ Support Now</h1>
         </div>
       </div>
       {/* events table list */}
