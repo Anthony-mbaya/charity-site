@@ -1,8 +1,11 @@
 import { PlatformLinks } from "../components/platformlinks";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export const Donate = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home-container">
       {/* homepage componets - formal layout */}
@@ -75,10 +78,10 @@ function Payment() {
       </p>
       <span>
         <p>
-          Paybill Number:<strong>985050</strong>{" "}
+          Paybill Number : <strong> 000000</strong>{" "}
         </p>
         <p>
-          Account Number:<strong>0111086801</strong>
+          Account Number : <strong> 0712345678</strong>
         </p>
       </span>
       <button onClick={toggleShowInst}>

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaAngleDown, FaHamburger, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-import logo from '/images/logo.jpg';
+import logo from '/images/charityicooo.png';
 export const Navbar = () => {
   const [showArrow, setShowArrow] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
@@ -65,19 +65,10 @@ export const Navbar = () => {
             <FaTimes size={25} onClick={toggleBar} />
           </span>
           <NavListLink link={"/"} text={"Home"} onClick={toggleBar} />
-          <NavListLink
-            link={"/about"}
-            text={"About"}
-            dropDown={[
-              { link: "/team", text: "Team" },
-              { link: "/contact", text: "Contact" },
-            ]}
-          />
-          <NavListLink link={"/causes"} text={"Causes"} />
-          <NavListLink link={"/donate"} text={"Donate"} />
           <NavListLink link={"/projects"} text={"Projects"} />
+          <NavListLink link={"/donate"} text={"Donate"} />
           <NavListLink link={"/contacts"} text={"Contacts"} />
-          <NavListLink link={"/events"} text={"Events"} />
+          <NavListLink link={"/about"} text={"About Us"} />
         </ul>
       </div>
     );
@@ -86,26 +77,17 @@ export const Navbar = () => {
     <nav className="nav-container">
       <span className="title-wrapper">
         <img className="logo" src={logo} alt="logo" />
-      <h1 className="title"><span>Hopeful</span> <span>Foundation</span></h1>
+      <h1 className="title"><span>Example</span> <span>Foundation</span></h1>
       </span>
       <span className="hamburger-tag">
         {showMenu && <FaHamburger onClick={toggleBar} size={25} />}
       </span>
       <ul className="nav-links">
         <NavListLink link={"/"} text={"Home"} />
-        <NavListLink
-          link={"/about"}
-          text={"About"}
-          dropDown={[
-            { link: "/team", text: "Team" },
-            { link: "/contact", text: "Contact" },
-          ]}
-        />
-        <NavListLink link={"/causes"} text={"Causes"} />
-        <NavListLink link={"/donate"} text={"Donate"} />
         <NavListLink link={"/projects"} text={"Projects"} />
+        <NavListLink link={"/donate"} text={"Donate"} />
         <NavListLink link={"/contacts"} text={"Contacts"} />
-        <NavListLink link={"/events"} text={"Events"} />
+        <NavListLink link={"/about"} text={"About Us"} />
       </ul>
       {!showMenu && <SideBar />}
     </nav>

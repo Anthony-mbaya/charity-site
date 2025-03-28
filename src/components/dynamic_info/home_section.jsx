@@ -11,7 +11,13 @@ import slider_image_list from "./slider_images";
 import { updatesData } from "./updates";
 import { FaCalendar, FaCoins, FaDonate, FaInfoCircle } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 export const HomeSection = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home-section">
       {/* welcome image and information blow up */}
@@ -19,9 +25,9 @@ export const HomeSection = () => {
         <div className="faded-overlay"></div>
         <TypedComponent />
         <h1>ENRICHING SOCIETIES</h1>
-        <button>DONATE</button>
+        <button> <Link to="/donate">Donate</Link></button>
         <p className="image-container-text">
-          At <b>Hopeful Foundation</b>, we believe in the power of kindness and
+          At <b>Example Foundation</b>, we believe in the power of kindness and
           the strength of community. Our mission is to make a difference in the
           lives of those in need by providing support, hope, and a helping hand.
           Thank you!
@@ -46,7 +52,7 @@ export const HomeSection = () => {
       </ul>
       {/* volunteer section */}
       <div className="volunteer">
-        <p>| help to those who need it</p>
+        <p>help to those who need it</p>
         <h1>Each donation is an essential help for everyone's life</h1>
         <div className="register">
           <img src="/images/donation.jpeg" alt="donation image" />
@@ -63,7 +69,7 @@ export const HomeSection = () => {
             Values through Charitable Endeavors by clicking the Button Below
           </p>
           <button>
-            <FaCoins color="gold" size={25} />
+            <Link to={'/donate'}><FaCoins color="gold" size={25} /></Link>
           </button>
         </div>
         <div className="support2">
@@ -75,8 +81,6 @@ export const HomeSection = () => {
       <EventsTable />
       {/* contribution section */}
       <ContributionPlans />
-      {/*steps to follow*/}
-      <StepsToFollow />
       {/* join the org */}
       <Join />
       {/* news and updates */}
@@ -123,7 +127,7 @@ function ImageSlider() {
       {slider_image_list.map((image, index) => (
         <SwiperSlide key={index} className="swiperSlide">
           <img src={image.image} alt={image.alt} />
-          <button>{image.btn_text}</button>
+          <button> <Link to={'/donate'}>{image.btn_text}</Link> </button>
           <p>{image.text}</p>
         </SwiperSlide>
       ))}
@@ -216,34 +220,6 @@ function ContributionPlans() {
         l3="Housing Support"
         l4="Skill Development Training"
       />
-    </div>
-  );
-}
-function StepsToFollow() {
-  return (
-    <div className="steps-to-follow">
-      <div className="step1">
-        <span>
-          <h2>1</h2>
-        </span>
-        <span>
-          <h1>Orphans</h1>
-          <p>
-            e Saliheen Foundation supports orphans by providing education, hea
-          </p>
-        </span>
-      </div>
-      <div className="step1">
-        <span>
-          <h2>2</h2>
-        </span>
-        <span>
-          <h1>Sustainability</h1>
-          <p>
-            e Saliheen Foundation supports orphans by providing education, hea
-          </p>
-        </span>
-      </div>
     </div>
   );
 }

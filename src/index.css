@@ -39,7 +39,7 @@
   @apply flex flex-row gap-2 items-center justify-center
 }
 .logo{
-  @apply w-16 h-16 rounded-full object-cover object-center shadow-lg shadow-slate-900
+  @apply w-16 h-16 p-2 rounded-full object-cover object-center
 }
 .title{
   @apply text-[1.2em] sm:text-[1.6em] text-center py-1 sm:py-1 w-fit text-white flex flex-col
@@ -96,7 +96,7 @@
   @apply sm:container w-full mx-auto py-3
 }
 .image-container{
-  @apply relative bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3;
+  @apply relative bg-bg1 bg-cover bg-center h-screen text-white px-20 sm:py-20 flex flex-col justify-center items-center gap-2 sm:gap-3 sm:mb-36;
 }
 .faded-overlay{
   @apply absolute inset-0 bg-black bg-opacity-40
@@ -144,11 +144,11 @@
 }
 /*services section*/
 .services{
-  @apply sm:container w-screen py-2 sm:py-5 sm:my-10 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md
+  @apply sm:container w-screen py-2 sm:py-5 sm:my-10 bg-slate-200 flex flex-col sm:flex-row justify-center items-center gap-5 rounded-md sm:mt-36 sm:mb-36
 }
 .services li{
-  @apply w-1/2 sm:w-auto text-center px-4 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse;
-  @apply flex flex-col gap-3
+  @apply w-1/2 sm:w-auto text-center px-4 sm:px-20 py-5 bg-white rounded-lg shadow-inner shadow-slate-500 animate-pulse;
+  @apply flex flex-col gap-6
 }
 .services li:first-child span{
   @apply bg-sustainability-icon bg-cover bg-center mx-auto w-16 h-16 rounded-lg shadow-lg shadow-slate-800
@@ -164,7 +164,7 @@
 }
 /*volunteer*/
 .volunteer{
-  @apply container my-5 flex flex-col gap-3
+  @apply container my-5 flex flex-col gap-3 sm:mt-36 sm:mb-36
 }
 .volunteer p{
   @apply text-sm text-center
@@ -186,7 +186,7 @@
 }
 /* support section */
 .support{
-  @apply sm:container h-[70vh] sm:h-[100vh] bg-real-5-front-view bg-cover bg-center flex flex-col sm:flex-row justify-around items-center p-3
+  @apply sm:container h-[70vh] sm:h-[100vh] bg-real-5-front-view bg-cover bg-center flex flex-col sm:flex-row justify-around items-center p-3 sm:mt-36 sm:mb-36
 }
 .support1{
   @apply bg-white bg-opacity-70 sm:w-2/5 p-2 sm:p-5 flex flex-col justify-center gap-6 h-fit items-center shadow-xl shadow-slate-600 rounded-xl
@@ -208,7 +208,7 @@
 }
 /* events section table */
 .events{
-  @apply sm:container w-full sm:w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-5 shadow-xl shadow-gray-500 px-2
+  @apply sm:container w-full sm:w-10/12 mx-auto py-4 bg-green-500 flex flex-col justify-around my-5 shadow-xl shadow-gray-500 px-2 sm:mt-36 sm:mb-36
 }
 .events thead tr{
   @apply flex justify-between items-center
@@ -227,13 +227,13 @@
 }
 /* contribution plans */
 .contribution-plan{
-  @apply sm:container text-sm w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 sm:gap-4 md:gap-3 items-center
+  @apply sm:container text-sm w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9 sm:gap-4 md:gap-3 items-center mb-5 sm:mt-36 sm:mb-36
 }
 .contribution-plan h2{
   @apply text-2xl sm:text-3xl text-green-500 sm:grid sm:col-span-2 md:col-span-3 font-bold text-center
 }
 .plan-intro{
-  @apply text-center p-6 bg-gray-100 rounded-lg shadow-md sm:grid sm:col-span-2 md:col-span-3
+  @apply text-center p-6 bg-gray-100 rounded-lg shadow-md sm:grid sm:col-span-2 md:col-span-3 sm:mt-10 sm:mb-10
 }
 .plan-intro h1{
   @apply text-3xl font-bold text-green-600 mb-4
@@ -271,25 +271,9 @@
 .plan li{
   @apply list-none flex flex-row gap-1 justify-start items-center
 }
-/* steps */
-.steps-to-follow{
-  @apply sm:container w-full md:w-8/12 mx-auto my-2 py-4 px-4 flex flex-col gap-5 sm:flex-row sm:gap-16
-}
-.step1{
-  @apply bg-green-500 p-4 flex gap-5 justify-center items-center rounded-md shadow-lg shadow-slate-500
-}
-.step1 h2{
-  @apply text-7xl text-white font-bold
-}
-.step1 h1{
-  @apply text-xl text-white font-bold
-}
-.step1 p{
-  @apply font-light
-}
 /* join sectiopn */
 .join{
-  @apply flex flex-col sm:flex-row px-4 sm:h-[40vh] md:h-[60vh] lg:h-[90vh] text-white
+  @apply flex flex-col sm:flex-row px-4 sm:h-[40vh] md:h-[60vh] lg:h-[90vh] text-white sm:mt-36 sm:mb-36
 }
 .join img{
   @apply sm:w-2/3 lg:w-5/6 h-full object-center object-cover
@@ -308,7 +292,7 @@
 }
 /* updates and news */
 .updates-news{
-  @apply sm:container bg-slate-300 mt-4 py-4 mx-auto flex flex-col gap-3 justify-center items-center;
+  @apply sm:container bg-slate-300 mt-4 py-4 mx-auto flex flex-col gap-3 justify-center items-center ;
 }
 .update-info{
   @apply text-center
@@ -376,4 +360,68 @@
 }
 .footer .copy{
   @apply px-2 sm:px-14 py-2
+}
+/* donatepage */
+.paybill_donation {
+  @apply max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md;
+}
+
+.paybill_donation h2 {
+  @apply text-2xl font-bold text-gray-800 mb-4;
+}
+
+.paybill_donation p {
+  @apply text-gray-600 mb-4;
+}
+
+.paybill_donation span {
+  @apply block bg-blue-50 p-4 rounded-lg mb-4 border border-blue-100;
+}
+
+.paybill_donation span p {
+  @apply mb-2 last:mb-0;
+}
+
+.paybill_donation span strong {
+  @apply text-blue-600 font-mono text-lg;
+}
+
+.paybill_donation button {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 mb-4;
+}
+
+.paybill_donation form {
+  @apply space-y-4 mb-6;
+}
+
+.paybill_donation form div {
+  @apply space-y-1;
+}
+
+.paybill_donation form label {
+  @apply block text-gray-700 font-medium;
+}
+
+.paybill_donation form input {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all;
+}
+
+.paybill_donation form button[type="submit"] {
+  @apply w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 mt-2;
+}
+
+.donation-list {
+  @apply mt-8 border-t pt-6;
+}
+
+.donation-list h2 {
+  @apply text-xl font-semibold text-gray-800 mb-4;
+}
+
+.donation-list ul {
+  @apply space-y-2;
+}
+
+.donation-list li {
+  @apply bg-gray-50 p-3 rounded-lg border border-gray-200;
 }

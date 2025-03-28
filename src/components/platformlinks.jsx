@@ -6,7 +6,7 @@ export const PlatformLinks =()=> {
             <div className="platform-links1">
                 <span>
                     <FaEnvelope />
-                    <a href="mailto:x@gmail.com">hopefulfoundation@gmail.com</a>
+                    <a href="mailto:x@gmail.com">examplefoundation@gmail.com</a>
                 </span>
                 <span>
                     <FaClock />
